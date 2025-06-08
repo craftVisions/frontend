@@ -2,6 +2,8 @@ import type { RouteObject } from 'react-router';
 import { createBrowserRouter } from 'react-router';
 import { ProtectedRoute, RestrictedRoute } from './components';
 import { AuthLayout, Home, Landing, Layout, Login, Onboarding, Signup } from './pages';
+import Chat from './pages/Chat';
+import Profile from './pages/Profile';
 
 const RestrictedRoutes: RouteObject[] = [
   {
@@ -43,6 +45,14 @@ const ProtectedRoutes: RouteObject[] = [
           {
             path: 'onboarding',
             Component: Onboarding,
+          },
+          {
+            path: 'chat',
+            Component: Chat,
+          },
+          {
+            path: 'profile',
+            Component: Profile,
           },
         ],
       },
