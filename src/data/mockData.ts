@@ -1,0 +1,148 @@
+import { type Project, type User } from '../types';
+
+export const mockUsers: User[] = [
+  {
+    id: '1',
+    name: 'Sarah Chen',
+    email: 'sarah@example.com',
+    avatar:
+      'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
+    bio: 'Frontend enthusiast with a passion for React and design systems',
+    role: 'frontend',
+    skills: ['React', 'TypeScript', 'Tailwind CSS', 'Figma'],
+    interests: ['UI/UX Design', 'Open Source', 'Web Performance'],
+    joinedAt: new Date('2024-01-15'),
+  },
+  {
+    id: '2',
+    name: 'Alex Rodriguez',
+    email: 'alex@example.com',
+    avatar:
+      'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
+    bio: 'Backend developer focused on scalable architecture',
+    role: 'backend',
+    skills: ['Node.js', 'PostgreSQL', 'Docker', 'AWS'],
+    interests: ['System Design', 'Microservices', 'DevOps'],
+    joinedAt: new Date('2024-02-20'),
+  },
+];
+
+export const mockProjects: Project[] = [
+  {
+    id: '1',
+    title: 'EcoTracker - Sustainability App',
+    description:
+      'A mobile-first web app to help users track their carbon footprint and discover eco-friendly alternatives.',
+    techStack: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
+    skillLevel: 'intermediate',
+    contributors: [mockUsers[0]],
+    maxContributors: 4,
+    createdBy: mockUsers[0],
+    createdAt: new Date('2024-03-01'),
+    tags: ['Environment', 'Mobile-First', 'Social Impact'],
+    isOpen: true,
+  },
+  {
+    id: '2',
+    title: 'DevTools Dashboard',
+    description: 'An open-source dashboard for developers to manage their projects, tasks, and team collaboration.',
+    techStack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
+    skillLevel: 'advanced',
+    contributors: [mockUsers[1]],
+    maxContributors: 6,
+    createdBy: mockUsers[1],
+    createdAt: new Date('2024-03-10'),
+    tags: ['Developer Tools', 'Productivity', 'Team Collaboration'],
+    isOpen: true,
+  },
+  {
+    id: '3',
+    title: 'Learning Path Creator',
+    description: 'Platform for creating and sharing personalized learning paths for programming skills.',
+    techStack: ['React', 'Python', 'FastAPI', 'PostgreSQL'],
+    skillLevel: 'beginner',
+    contributors: [],
+    maxContributors: 3,
+    createdBy: mockUsers[0],
+    createdAt: new Date('2024-03-15'),
+    tags: ['Education', 'Learning', 'Community'],
+    isOpen: true,
+  },
+];
+
+export const skills = [
+  'React',
+  'Vue',
+  'Angular',
+  'TypeScript',
+  'JavaScript',
+  'Node.js',
+  'Express',
+  'Python',
+  'Django',
+  'FastAPI',
+  'PostgreSQL',
+  'MongoDB',
+  'Redis',
+  'Docker',
+  'Kubernetes',
+  'AWS',
+  'Azure',
+  'GCP',
+  'Git',
+  'GraphQL',
+  'REST APIs',
+  'Tailwind CSS',
+  'Sass',
+  'Webpack',
+  'Vite',
+  'Jest',
+];
+
+export const interests = [
+  'Open Source',
+  'Web Development',
+  'Mobile Development',
+  'Data Science',
+  'Machine Learning',
+  'AI/ML',
+  'DevOps',
+  'System Design',
+  'Competitive Programming',
+  'UI/UX Design',
+  'Blockchain',
+  'IoT',
+  'Cybersecurity',
+  'Game Development',
+  'Social Impact',
+  'EdTech',
+  'FinTech',
+  'HealthTech',
+];
+
+export const roles = [
+  {
+    id: 'frontend',
+    title: 'Frontend Developer',
+    description: 'Focus on user interfaces and user experience',
+    icon: '🎨',
+  },
+  {
+    id: 'backend',
+    title: 'Backend Developer',
+    description: 'Build server-side logic and databases',
+    icon: '⚙️',
+  },
+  {
+    id: 'fullstack',
+    title: 'Full-Stack Developer',
+    description: 'Work on both frontend and backend',
+    icon: '🚀',
+  },
+  {
+    id: 'devops',
+    title: 'DevOps Engineer',
+    description: 'Infrastructure and deployment pipelines',
+    icon: '🔧',
+  },
+];

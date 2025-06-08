@@ -1,13 +1,15 @@
+import type { RouteObject } from 'react-router';
 import { createBrowserRouter } from 'react-router';
-import { AuthLayout, Home, Login, Signup } from './pages';
+import { ProtectedRoute, RestrictedRoute } from './components';
+import { AuthLayout, Home, Landing, Layout, Login, Signup } from './pages';
 
-const router = createBrowserRouter([
+const RestrictedRoutes: RouteObject[] = [
   {
-    path: '/',
+    Component: RestrictedRoute,
     children: [
       {
-        index: true,
-        Component: Home,
+        path: 'landing',
+        Component: Landing,
       },
       {
         path: 'auth',
@@ -24,6 +26,25 @@ const router = createBrowserRouter([
         ],
       },
     ],
+  },
+];
+
+const ProtectedRoutes: RouteObject[] = [
+  {
+    Component: ProtectedRoute,
+    children: [
+      {
+        index: true,
+        Component: Home,
+      },
+    ],
+  },
+];
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    children: [...RestrictedRoutes, ...ProtectedRoutes],
   },
 ]);
 
