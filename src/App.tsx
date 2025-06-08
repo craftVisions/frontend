@@ -1,13 +1,8 @@
-import { useState } from 'react';
+import { RouterProvider } from 'react-router';
+import router from './router';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <>
-      <h1 className="text-xl">Craft Vision </h1>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
